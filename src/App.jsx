@@ -13,7 +13,6 @@ function App() {
   };
 
   const handleHomeClick = () => {
-    console.log('handleHomeClick')
     setShowProductList(false);
   };
 
