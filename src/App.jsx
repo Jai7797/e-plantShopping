@@ -13,6 +13,7 @@ function App() {
   };
 
   const handleHomeClick = () => {
+    console.log('handleHomeClick')
     setShowProductList(false);
   };
 
@@ -37,7 +38,7 @@ function App() {
 
       </div>
       <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
-        <ProductList onHomeClick={handleHomeClick}/>
+        <ProductList onHomeClick={handleHomeClick} className="product-list"/>
       </div>
     </div>
   );
