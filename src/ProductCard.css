@@ -1,0 +1,6 @@
+.product-image {
+  width: 200px;       /* Set your desired width */
+  height: 200px;      /* Set your desired height */
+  object-fit: cover;  /* Ensures the image fills the box without distortion */
+  border-radius: 8px; /* Optional: for rounded corners */
+}

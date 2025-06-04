@@ -288,25 +288,28 @@ const totalQuantity = useSelector(selectTotalQuantity);
                 </div>
             </div>
             {!showCart ? (
-                <div className="product-grid">
+                <div className="product-list">  
                      
              {plantsArray.map(category=>{
                 return(
                          <>
                     <h4>{category.category}</h4> 
                     <br></br>
+                     <div className="product-grid">  
                     {
+                       
                         category.plants.map(plant=>{
 
                             return(
                               
 
-                          <ProductCard key={plant.index} {...plant} />
+                          <ProductCard key={plant.index} {...plant}  />
 
                             )
                         })
                     }
                    
+                  </div>
                     </>
                 )
              })}

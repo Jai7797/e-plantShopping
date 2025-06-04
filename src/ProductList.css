@@ -42,11 +42,23 @@ body {
 /* Product Grid */
 .product-grid {
     display:flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100vw;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    
 }
+
+/* .product-grid {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+} */
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
