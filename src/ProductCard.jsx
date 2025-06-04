@@ -27,7 +27,7 @@ const handleAddItem = (item) => {
       <img src={`${image}`} alt={cost} className="product-image" />
       <h3>{cost}</h3>
       {description && <p>{description}</p>}
-      <p><strong>${cost}</strong></p>
+      <p><strong>{cost}</strong></p>
      
 <button onClick={() => handleAddItem({
   name: name,
@@ -36,6 +36,7 @@ const handleAddItem = (item) => {
   description: description,
   quantity: 1
 })}>
+  
   Add to Cart
 </button>
 

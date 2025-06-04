@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
@@ -39,8 +39,10 @@ const calculateTotalAmount = () => {
   const handleRemove = (item) => {
       dispatch(removeItem(item));
   };
-
-
+const [isComingSoon,setisComingSoon]=useState(false);
+ const handleCheckOut = () => {
+      setisComingSoon(!isComingSoon);
+  };
 
   return (
     <div className="cart-container">
@@ -71,7 +73,11 @@ const calculateTotalAmount = () => {
       <div className="continue_shopping_btn">
         <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
         <br />
-        <button className="get-started-button1">Checkout</button>
+        <button className="get-started-button1" onClick={handleCheckOut}>Checkout</button>
+      
+
+      {isComingSoon && <span className="coming-soon">Coming Soon..</span>}
+
       </div>
     </div>
   );
